@@ -18,9 +18,24 @@
     <meta property="og:image" content="assets/header-city.jpg">
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="preload" href="assets/header-city.jpg" as="image">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="assets/logo.svg" as="image">
+    <noscript>
+      <style>
+        body.is-loading { overflow: auto; }
+        .loader-screen { display: none; }
+      </style>
+    </noscript>
+    <link rel="stylesheet" href="styles.css?v=20260529-loader">
   </head>
-  <body>
+  <body class="is-loading">
+    <div class="loader-screen" data-loader-screen aria-hidden="true">
+      <div class="loader-top-bar" aria-hidden="true"></div>
+      <div class="loader-bottom-bar" aria-hidden="true"></div>
+      <div class="loader-center">
+        <img class="loader-logo" src="assets/logo.svg" alt="" width="470" height="190">
+      </div>
+    </div>
+
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header" data-header>
@@ -216,6 +231,6 @@
         }
       }
     </script>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260529-loader"></script>
   </body>
 </html>
